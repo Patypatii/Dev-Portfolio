@@ -1,22 +1,19 @@
 {
-    "name": "Mark Choi",
-
+    "name": "Patrick Wambugu",
     "profilePictureUrl": "images/pictures/profile-picture.jpg",
     "resumePdfUrl": "",
-
     "statusCircleVisible": true,
     "statusCircleVariant": "available",
     "statusCircleHoverMessage": "status_message_available_for_freelance",
-
     "locales": {
         "en": {
-            "localized_name": "Mark Choi",
-            "localized_name_stylized": " [[Mark {{Choi}}]]",
+            "localized_name": "Patrick Wambugu",
+            "localized_name_stylized": " [[Patrick {{Wambugu}}]]",
             "status_message_available_for_freelance": "Available for freelance!",
             "roles": [
                 "Backend Developer",
                 "Frontend Developer",
-                "DevOps Engineer",
+                "Mobile App Developer",
                 "UX Designer"
             ]
         },
@@ -25,7 +22,7 @@
             "roles": [
                 "Desarrollador Backend",
                 "Desarrollador Frontend",
-                "Ingeniero DevOps",
+                "Desarrollador de Apps Móviles",
                 "Diseñador UX"
             ]
         },
@@ -34,7 +31,7 @@
             "roles": [
                 "Développeur Backend",
                 "Développeur Frontend",
-                "Ingénieur DevOps",
+                "Développeur d’Applications Mobiles",
                 "Designer UX"
             ]
         },
@@ -45,7 +42,7 @@
             "roles": [
                 "백엔드 개발자",
                 "프론트엔드 개발자",
-                "데브옵스 엔지니어",
+                "모바일 앱 개발자",
                 "UX 디자이너"
             ]
         }

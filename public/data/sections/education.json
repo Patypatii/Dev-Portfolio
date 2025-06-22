@@ -27,7 +27,6 @@
             }
         }
     },
-
     "articles": [
         {
             "id": 1,
@@ -42,86 +41,106 @@
                     "id": 1,
                     "img": "images/pictures/timeline-place-udacity.png",
                     "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2014, "month": 1},
-                    "dateEnd": {"year": 2014, "month": 6},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2014,
+                        "month": 1
+                    },
+                    "dateEnd": {
+                        "year": 2014,
+                        "month": 6
+                    },
                     "locales": {
                         "en": {
-                            "title": "PHP Development {{Nanodegree}}",
+                            "title": "JavaScript Development {{Nanodegree}}",
                             "province": "",
                             "country": "Remote",
                             "institution": "Udacity",
-                            "text": "Successfully completed an intensive Nanodegree program with a strong emphasis on [[PHP development]], where I gained comprehensive, hands-on experience in building dynamic and scalable web applications.",
+                            "text": "Successfully completed an intensive Nanodegree program with a strong emphasis on [[JavaScript development]], where I gained comprehensive, hands-on experience in building dynamic and scalable web applications.",
                             "list": [],
                             "tags": []
                         },
                         "es": {
-                            "title": "Desarrollo en PHP {{Nanodegree}}",
+                            "title": "Desarrollo en JavaScript {{Nanodegree}}",
                             "province": "",
                             "country": "Remoto",
                             "institution": "Udacity",
-                            "text": "Completé con éxito un programa intensivo de Nanodegree con un fuerte enfoque en [[PHP development]], donde adquirí una experiencia práctica y completa en la creación de aplicaciones web dinámicas y escalables.",
+                            "text": "Completé con éxito un programa intensivo de Nanodegree con un fuerte enfoque en [[JavaScript development]], donde adquirí una experiencia práctica y completa en la creación de aplicaciones web dinámicas y escalables.",
                             "list": []
                         },
                         "fr": {
-                            "title": "Développement PHP {{Nanodegree}}",
+                            "title": "Développement JavaScript {{Nanodegree}}",
                             "province": "",
                             "country": "À distance",
                             "institution": "Udacity",
-                            "text": "J'ai terminé avec succès un programme Nanodegree intensif axé sur [[PHP development]], au cours duquel j'ai acquis une expérience pratique approfondie dans la création d'applications web dynamiques et évolutives.",
+                            "text": "J'ai terminé avec succès un programme Nanodegree intensif axé sur [[JavaScript development]], au cours duquel j'ai acquis une expérience pratique approfondie dans la création d'applications web dynamiques et évolutives.",
                             "list": []
                         },
                         "ko": {
-                            "title": "PHP 개발 {{Nanodegree}}",
+                            "title": "JavaScript 개발 {{Nanodegree}}",
                             "province": "",
                             "country": "원격",
                             "institution": "Udacity",
-                            "text": "[[PHP development]]에 중점을 둔 집중형 나노디그리 프로그램을 성공적으로 수료했으며, 동적이고 확장 가능한 웹 애플리케이션을 구축하는 데 있어 폭넓고 실용적인 경험을 쌓았습니다.",
+                            "text": "[[JavaScript development]]에 중점을 둔 집중형 나노디그리 프로그램을 성공적으로 수료했으며, 동적이고 확장 가능한 웹 애플리케이션을 구축하는 데 있어 폭넓고 실용적인 경험을 쌓았습니다.",
                             "list": []
                         }
                     }
                 },
                 {
                     "id": 2,
-                    "img": "images/pictures/timeline-place-mit.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2016, "month": 1},
-                    "dateEnd": {"year": 2020, "month": 12},
+                    "img": "images/pictures/timeline-place-university-paris.png",
+                    "dateStart": {
+                        "year": 2021,
+                        "month": 3
+                    },
+                    "dateEnd": {
+                        "year": 2021,
+                        "month": 12
+                    },
                     "locales": {
                         "en": {
-                            "title": "{{Bachelor}} in Computer Science",
-                            "province": "Massachusetts",
-                            "country": "US",
-                            "institution": "MIT",
-                            "text": "Earned a [[Bachelor's degree in Computer Science]], focusing on algorithms, data structures, software engineering, and web development. Gained hands-on experience through various programming projects, coding boot camps, and many collaborative team-based software development activities.",
+                            "title": "Certificate in 3D Animation",
+                            "province": "Nyeri",
+                            "country": "Kenya",
+                            "institution": "Dedan Kimathi University of Technology",
+                            "text": "Completed a certificate in 3D animation with a focus on Blender, lighting, and character motion. Gained hands-on experience in visual storytelling and digital art.",
+                            "list": [
+                                "Blender",
+                                "Rendering",
+                                "Rigging"
+                            ],
+                            "tags": [
+                                "3D",
+                                "Animation"
+                            ]
+                        },
+                        "fr": {
+                            "title": "Certificat en Animation 3D",
+                            "province": "Nyeri",
+                            "country": "Kenya",
+                            "institution": "Université Dedan Kimathi de Technologie",
+                            "text": "Certificat complété en animation 3D, axé sur Blender, le rendu, et l'animation de personnage.",
                             "list": [],
                             "tags": []
                         },
                         "es": {
-                            "title": "{{Grado}} en Ciencias de la Computación",
-                            "province": "Massachusetts",
-                            "country": "EE. UU.",
-                            "institution": "MIT",
-                            "text": "Obtuve un [[grado en Ciencias de la Computación]], con enfoque en algoritmos, estructuras de datos, ingeniería de software y desarrollo web. Adquirí experiencia práctica a través de diversos proyectos de programación, bootcamps de codificación y actividades colaborativas de desarrollo en equipo.",
-                            "list": [],
-                            "tags": []
-                        },
-                        "fr": {
-                            "title": "{{Licence}} en informatique",
-                            "province": "Massachusetts",
-                            "country": "États-Unis",
-                            "institution": "MIT",
-                            "text": "J'ai obtenu une [[licence en informatique]], avec un accent sur les algorithmes, les structures de données, l’ingénierie logicielle et le développement web. J'ai acquis une solide expérience pratique grâce à divers projets de programmation, des bootcamps de code et des activités collaboratives en équipe.",
+                            "title": "Certificado en Animación 3D",
+                            "province": "Nyeri",
+                            "country": "Kenia",
+                            "institution": "Universidad de Tecnología Dedan Kimathi",
+                            "text": "Certificado completado en animación 3D con enfoque en Blender y narración visual.",
                             "list": [],
                             "tags": []
                         },
                         "ko": {
-                            "title": "컴퓨터 과학 {{학사}}",
-                            "province": "매사추세츠",
-                            "country": "미국",
-                            "institution": "MIT",
-                            "text": "알고리즘, 자료 구조, 소프트웨어 공학, 웹 개발에 중점을 둔 [[컴퓨터 과학 학사 학위]]를 취득하였습니다. 다양한 프로그래밍 프로젝트, 코딩 부트캠프, 그리고 팀 기반의 협업 활동을 통해 실무 경험을 쌓았습니다.",
+                            "title": "3D 애니메이션 수료증",
+                            "province": "니에리",
+                            "country": "케냐",
+                            "institution": "데단 키마시 공과대학교",
+                            "text": "Blender, 조명, 캐릭터 애니메이션 중심의 3D 애니메이션 과정 수료.",
                             "list": [],
                             "tags": []
                         }
@@ -129,139 +148,151 @@
                 },
                 {
                     "id": 3,
-                    "img": "images/pictures/timeline-place-university-paris.png",
-                    "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2020, "month": 9},
-                    "dateEnd": {"year": 2022, "month": 6},
+                    "img": "images/pictures/timeline-place-harvard.png",
+                    "dateStart": {
+                        "year": 2022,
+                        "month": 9
+                    },
+                    "dateEnd": {
+                        "year": 2026,
+                        "month": 6
+                    },
                     "locales": {
                         "en": {
-                            "title": "{{Master's}} in Artificial Intelligence",
-                            "province": "",
-                            "country": "France",
-                            "institution": "University of Paris",
-                            "text": "Completed a comprehensive Master's program focused on [[cutting-edge AI topics]], including:",
+                            "title": "BSc in Information Technology",
+                            "province": "Kerugoya",
+                            "country": "Kenya",
+                            "institution": "Kirinyaga University",
+                            "text": "Currently pursuing a BSc in Information Technology with core subjects including software engineering, networking, databases, and web/mobile app development.",
                             "list": [
-                                "Machine Learning",
-                                "Natural Language Processing (NLP)",
-                                "Neural Networks"
+                                "React Native",
+                                "Node.js",
+                                "MongoDB",
+                                "Cybersecurity"
                             ],
                             "tags": [
-                                "Neural Networks",
-                                "Machine Learning"
-                            ]
-                        },
-                        "es": {
-                            "title": "{{Máster}} en Inteligencia Artificial",
-                            "province": "",
-                            "country": "Francia",
-                            "institution": "Universidad de París",
-                            "text": "Completé un programa de máster integral centrado en [[temas avanzados de IA]], incluyendo:",
-                            "list": [
-                                "Aprendizaje automático",
-                                "Procesamiento del lenguaje natural (PLN)",
-                                "Redes neuronales"
-                            ],
-                            "tags": [
-                                "Redes neuronales",
-                                "Aprendizaje automático"
+                                "IT",
+                                "Software",
+                                "Web"
                             ]
                         },
                         "fr": {
-                            "title": "{{Master}} en Intelligence Artificielle",
-                            "province": "",
-                            "country": "France",
-                            "institution": "Université de Paris",
-                            "text": "J'ai terminé un programme de master complet axé sur [[les sujets avancés en IA]], notamment :",
-                            "list": [
-                                "Apprentissage automatique",
-                                "Traitement du langage naturel (NLP)",
-                                "Réseaux de neurones"
-                            ],
-                            "tags": [
-                                "Réseaux de neurones",
-                                "Apprentissage automatique"
-                            ]
+                            "title": "Licence en Technologies de l'information",
+                            "province": "Kerugoya",
+                            "country": "Kenya",
+                            "institution": "Université de Kirinyaga",
+                            "text": "En cours de licence en informatique avec des sujets clés comme le développement logiciel, la cybersécurité, et les applications mobiles.",
+                            "list": [],
+                            "tags": []
+                        },
+                        "es": {
+                            "title": "Grado en Tecnologías de la Información",
+                            "province": "Kerugoya",
+                            "country": "Kenia",
+                            "institution": "Universidad de Kirinyaga",
+                            "text": "Actualmente cursando una licenciatura en TI, con enfoque en desarrollo de software, seguridad y aplicaciones móviles.",
+                            "list": [],
+                            "tags": []
                         },
                         "ko": {
-                            "title": "인공지능 {{석사}}",
-                            "province": "",
-                            "country": "프랑스",
-                            "institution": "파리 대학교",
-                            "text": "[[최첨단 인공지능 주제]]를 중심으로 한 종합적인 석사 과정을 수료하였으며, 주요 내용은 다음과 같습니다:",
-                            "list": [
-                                "머신러닝",
-                                "자연어 처리 (NLP)",
-                                "신경망"
-                            ],
-                            "tags": [
-                                "신경망",
-                                "머신러닝"
-                            ]
+                            "title": "정보 기술 학사",
+                            "province": "케루고야",
+                            "country": "케냐",
+                            "institution": "키리니야가 대학교",
+                            "text": "소프트웨어 개발, 보안, 웹 및 모바일 앱 개발을 포함한 IT 학사 과정을 수강 중.",
+                            "list": [],
+                            "tags": []
                         }
                     }
                 },
                 {
                     "id": 4,
-                    "img": "images/pictures/timeline-place-harvard.png",
+                    "img": "images/pictures/timeline-place-mit.png",
                     "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2022, "month": 9},
-                    "dateEnd": {"year": 2025, "month": 6},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2022,
+                        "month": 9
+                    },
+                    "dateEnd": {
+                        "year": 2025,
+                        "month": 6
+                    },
                     "locales": {
                         "en": {
-                            "title": "{{PhD}} in Computer Science",
-                            "province": "Massachusetts",
-                            "country": "US",
-                            "institution": "Harvard University",
-                            "text": "Currently pursuing a PhD with a focus on [[deep learning]] and its real-world applications, particularly in:",
+                            "title": "Certificate in Software Development",
+                            "province": "Nairobi",
+                            "country": "Kenya",
+                            "institution": "PowerLearn Project",
+                            "text": "Currently pursuing a Certificate with a focus on [[deep learning]] and its real-world applications, particularly in:",
                             "list": [
                                 "Computer Vision",
                                 "Innovative AI research",
                                 "Developing [[novel algorithms]] for image recognition"
                             ],
                             "tags": [
-                                "Deep Learning", "Computer Vision", "AI Research", "Algorithms"
+                                "Web Development",
+                                "Mobile App",
+                                "Frontend",
+                                "Server/API"
                             ]
                         },
                         "es": {
-                            "title": "{{Doctorado}} en Ciencias de la Computación",
-                            "province": "Massachusetts",
-                            "country": "EE. UU.",
-                            "institution": "Universidad de Harvard",
-                            "text": "Actualmente cursando un doctorado con enfoque en [[aprendizaje profundo]] y sus aplicaciones en el mundo real, especialmente en:",
+                            "title": "Certificado en Desarrollo de Software",
+                            "province": "Nairobi",
+                            "country": "Kenia",
+                            "institution": "PowerLearn Project",
+                            "text": "Actualmente cursando un certificado con enfoque en [[aprendizaje profundo]] y sus aplicaciones en el mundo real, especialmente en:",
                             "list": [
                                 "Visión por computadora",
                                 "Investigación innovadora en IA",
                                 "Desarrollo de [[nuevos algoritmos]] para el reconocimiento de imágenes"
                             ],
-                            "tags": ["Aprendizaje profundo", "Visión por computadora", "Investigación en IA", "Algoritmos"]
+                            "tags": [
+                                "Desarrollo web",
+                                "Aplicaciones móviles",
+                                "Frontend",
+                                "API"
+                            ]
                         },
                         "fr": {
-                            "title": "{{Doctorat}} en informatique",
-                            "province": "Massachusetts",
-                            "country": "États-Unis",
-                            "institution": "Université Harvard",
-                            "text": "Actuellement en doctorat, avec une spécialisation en [[deep learning]] et ses applications concrètes, notamment dans :",
+                            "title": "Certificat en développement logiciel",
+                            "province": "Nairobi",
+                            "country": "Kenya",
+                            "institution": "PowerLearn Project",
+                            "text": "Actuellement en certificat, avec une spécialisation en [[deep learning]] et ses applications concrètes, notamment dans :",
                             "list": [
                                 "La vision par ordinateur",
                                 "La recherche innovante en IA",
                                 "Le développement de [[nouveaux algorithmes]] pour la reconnaissance d’images"
                             ],
-                            "tags": ["Apprentissage profond", "Vision par ordinateur", "Recherche en IA", "Algorithmes"]
+                            "tags": [
+                                "Développement web",
+                                "Application mobile",
+                                "Frontend",
+                                "API"
+                            ]
                         },
                         "ko": {
-                            "title": "컴퓨터 과학 {{박사}}",
-                            "province": "매사추세츠",
-                            "country": "미국",
-                            "institution": "하버드 대학교",
-                            "text": "[[딥러닝]] 및 그 실생활 적용에 중점을 둔 박사 과정을 진행 중이며, 주요 연구 분야는 다음과 같습니다:",
+                            "title": "소프트웨어 개발 수료증",
+                            "province": "나이로비",
+                            "country": "케냐",
+                            "institution": "PowerLearn Project",
+                            "text": "[[딥러닝]] 및 그 실생활 적용에 중점을 둔 수료 과정을 진행 중이며, 주요 연구 분야는 다음과 같습니다:",
                             "list": [
                                 "컴퓨터 비전",
                                 "혁신적인 인공지능 연구",
                                 "이미지 인식을 위한 새로운 알고리즘 개발"
                             ],
-                            "tags": ["딥러닝", "컴퓨터 비전", "AI 연구", "알고리즘"]
+                            "tags": [
+                                "웹 개발",
+                                "모바일 앱",
+                                "프론트엔드",
+                                "서버/API"
+                            ]
                         }
                     }
                 }
