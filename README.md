@@ -1,4 +1,4 @@
-# [<img src="docs/assets/logo.png"> React Portfolio](https://ryanbalieiro.github.io/react-portfolio-template/) by Ryan Balieiro
+# [<img src="docs/assets/logo.png"> React Portfolio](https://ryanbalieiro.github.io/react-portfolio-template/) by Patrick Wambugu
 
 A sleek, futuristic portfolio template for developers – built with **React** and **Bootstrap 5**.
 
@@ -19,7 +19,7 @@ Here's a list of live versions of the template:
 
 | #     | Version             | Description                                             | URL                                                                     |
 |-------|---------------------|---------------------------------------------------------|-------------------------------------------------------------------------|
-| 🟢    | Mark Choi (default) | Latest deployment of the template here on GitHub pages. | [Preview](https://ryanbalieiro.github.io/react-portfolio-template/)     |
+| 🟢    | Patrick Wambugu (default) | Latest deployment of the template here on GitHub pages. | [Preview](https://ryanbalieiro.github.io/react-portfolio-template/)     |
 | 🟣    | Emily Park          | An example of how the template can be customized.       | [Preview](https://ryansandbox.github.io/emily-park-react-portfolio/)    |
 | 🔵    | Michael Özkan       | Another example of how the template can be customized.  | [Preview](https://ryansandbox.github.io/michael-ozkan-react-portfolio/) |
 

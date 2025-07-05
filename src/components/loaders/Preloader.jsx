@@ -1,19 +1,19 @@
 import "./Preloader.scss"
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import PacMan from "/src/components/widgets/PacMan.jsx"
 import Logo from "/src/components/widgets/Logo.jsx"
-import {useScheduler} from "/src/hooks/scheduler.js"
-import {useUtils} from "/src/hooks/utils.js"
-import {useConstants} from "/src/hooks/constants.js"
+import { useScheduler } from "/src/hooks/scheduler.js"
+import { useUtils } from "/src/hooks/utils.js"
+import { useConstants } from "/src/hooks/constants.js"
 
 const PreloaderState = {
-    NONE:               { id: 0, key: "none" },
-    PREPARING:          { id: 1, key: "preparing" },
-    SHOWING:            { id: 2, key: "showing" },
-    SHOWN:              { id: 3, key: "shown" },
-    READY_TO_HIDE:      { id: 4, key: "readyToHide" },
-    HIDING:             { id: 5, key: "hiding" },
-    HIDDEN:             { id: 6, key: "hidden" },
+    NONE: { id: 0, key: "none" },
+    PREPARING: { id: 1, key: "preparing" },
+    SHOWING: { id: 2, key: "showing" },
+    SHOWN: { id: 3, key: "shown" },
+    READY_TO_HIDE: { id: 4, key: "readyToHide" },
+    HIDING: { id: 5, key: "hiding" },
+    HIDDEN: { id: 6, key: "hidden" },
 }
 
 function Preloader({ children, preloaderSettings }) {
@@ -40,7 +40,7 @@ function Preloader({ children, preloaderSettings }) {
     useEffect(() => {
         setState(PreloaderState.NONE)
 
-        if(!enabled) {
+        if (!enabled) {
             setState(PreloaderState.HIDDEN)
             return
         }
@@ -52,7 +52,7 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.PREPARING
      */
     useEffect(() => {
-        if(state !== PreloaderState.PREPARING || !didLoadAllImages)
+        if (state !== PreloaderState.PREPARING || !didLoadAllImages)
             return
         utils.dom.setBodyScrollEnabled(false)
         scheduler.clearAllWithTag(tag)
@@ -63,7 +63,7 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.SHOWING
      */
     useEffect(() => {
-        if(state !== PreloaderState.SHOWING)
+        if (state !== PreloaderState.SHOWING)
             return
         scheduler.clearAllWithTag(tag)
         scheduler.schedule(() => {
@@ -75,7 +75,7 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.SHOWN
      */
     useEffect(() => {
-        if(state !== PreloaderState.SHOWN)
+        if (state !== PreloaderState.SHOWN)
             return
         scheduler.clearAllWithTag(tag)
         scheduler.schedule(() => {
@@ -87,11 +87,11 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.READY_TO_HIDE
      */
     useEffect(() => {
-        if(state !== PreloaderState.READY_TO_HIDE)
+        if (state !== PreloaderState.READY_TO_HIDE)
             return
         scheduler.clearAllWithTag(tag)
 
-        if(utils.storage.getWindowVariable("stayOnThePreloaderScreen"))
+        if (utils.storage.getWindowVariable("stayOnThePreloaderScreen"))
             return
 
         let timePassed = 0
@@ -104,7 +104,7 @@ function Preloader({ children, preloaderSettings }) {
             const noImagesFound = timePassed >= 4 && imageCount === 0
             const didLoadEnoughTime = timePassed >= 5
 
-            if(didLoadAllImages || noImagesFound || didLoadEnoughTime) {
+            if (didLoadAllImages || noImagesFound || didLoadEnoughTime) {
                 setState(PreloaderState.HIDING)
             }
         }, 100, tag)
@@ -114,7 +114,7 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.HIDING
      */
     useEffect(() => {
-        if(state !== PreloaderState.HIDING)
+        if (state !== PreloaderState.HIDING)
             return
 
         scheduler.clearAllWithTag(tag)
@@ -128,7 +128,7 @@ function Preloader({ children, preloaderSettings }) {
      * @listens PreloaderState.HIDDEN
      */
     useEffect(() => {
-        if(state !== PreloaderState.HIDDEN)
+        if (state !== PreloaderState.HIDDEN)
             return
         scheduler.clearAllWithTag(tag)
         utils.dom.setBodyScrollEnabled(true)
@@ -139,15 +139,15 @@ function Preloader({ children, preloaderSettings }) {
         <div className={`preloader-content-wrapper`}>
             {shouldShowPreloaderWindow && (
                 <PreloaderWindow title={title}
-                                 subtitle={subtitle}
-                                 logoOffset={logoOffset}
-                                 setDidLoadAllImages={setDidLoadAllImages}
-                                 showElements={shouldShowContentElements}
-                                 isHiding={isHiding}/>
+                    subtitle={subtitle}
+                    logoOffset={logoOffset}
+                    setDidLoadAllImages={setDidLoadAllImages}
+                    showElements={shouldShowContentElements}
+                    isHiding={isHiding} />
             )}
 
             {shouldShowContent && (
-                <PreloaderContent children={children}/>
+                <PreloaderContent children={children} />
             )}
         </div>
     )
@@ -164,12 +164,12 @@ function PreloaderWindow({ title, subtitle, logoOffset, setDidLoadAllImages, sho
         `preloader-window-hidden` : ``
 
     useEffect(() => {
-        if(didLoadLogo)
+        if (didLoadLogo)
             setDidLoadAllImages(true)
     }, [didLoadLogo])
 
     useEffect(() => {
-        if(!showElements) {
+        if (!showElements) {
             setIsPacManHidden(true)
             return
         }
@@ -184,13 +184,13 @@ function PreloaderWindow({ title, subtitle, logoOffset, setDidLoadAllImages, sho
         <div className={`preloader-window ${hiddenClass}`}>
             <div className={`preloader-window-content`}>
                 <PacMan variant={PacMan.ColorVariants.LOADER}
-                        hidden={isPacManHidden}/>
+                    hidden={isPacManHidden} />
 
                 <PreloaderWindowInfo title={title}
-                                     subtitle={subtitle}
-                                     logoOffset={logoOffset}
-                                     hidden={!showElements}
-                                     setDidLoadLogo={setDidLoadLogo}/>
+                    subtitle={subtitle}
+                    logoOffset={logoOffset}
+                    hidden={!showElements}
+                    setDidLoadLogo={setDidLoadLogo} />
             </div>
         </div>
     )
@@ -227,7 +227,7 @@ function PreloaderWindowInfo({ title, subtitle, logoOffset, hidden, setDidLoadLo
     }, [])
 
     useEffect(() => {
-        if(hidden) {
+        if (hidden) {
             setIsHidden(true)
             return
         }
@@ -261,17 +261,17 @@ function PreloaderWindowInfo({ title, subtitle, logoOffset, hidden, setDidLoadLo
         <div className={`preloader-window-info ${hiddenClass}`}>
             <div className={`preloader-window-info-title`}>
                 <Logo size={3}
-                      className={`preloader-window-logo`}
-                      setDidLoad={setDidLoadLogo}
-                      style={logoStyle}/>
+                    className={`preloader-window-logo`}
+                    setDidLoad={setDidLoadLogo}
+                    style={logoStyle} />
 
                 <h5 className={`lead-2 mb-0`}
-                    dangerouslySetInnerHTML={{__html: title}}/>
+                    dangerouslySetInnerHTML={{ __html: title }} />
             </div>
 
             <div className={`preloader-window-info-developer text-4`}
-                 style={developerStyle}
-                 dangerouslySetInnerHTML={{__html: subtitle}}>
+                style={developerStyle}
+                dangerouslySetInnerHTML={{ __html: subtitle }}>
             </div>
         </div>
     )

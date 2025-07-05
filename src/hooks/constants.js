@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This hook provides constants that are used throughout the application.
  */
@@ -35,28 +35,28 @@ export const useConstants = () => {
 
     /** @const */
     const SWIPER_BREAKPOINTS_FOR_THREE_SLIDES = {
-        0:    { id: "bp-0", slidesPerView: 1 },
-        650:  { id: "bp-1", slidesPerView: 2 },
-        991:  { id: "bp-2", slidesPerView: 1 },
+        0: { id: "bp-0", slidesPerView: 1 },
+        650: { id: "bp-1", slidesPerView: 2 },
+        991: { id: "bp-2", slidesPerView: 1 },
         1050: { id: "bp-3", slidesPerView: 2 },
         1600: { id: "bp-4", slidesPerView: 3 }
     }
 
     /** @const */
     const SWIPER_BREAKPOINTS_FOR_FOUR_SLIDES = {
-        0:    { id: "bp-0", slidesPerView: 2 },
-        650:  { id: "bp-1", slidesPerView: 3 },
-        767:  { id: "bp-2", slidesPerView: 2 },
-        900:  { id: "bp-3", slidesPerView: 3 },
+        0: { id: "bp-0", slidesPerView: 2 },
+        650: { id: "bp-1", slidesPerView: 3 },
+        767: { id: "bp-2", slidesPerView: 2 },
+        900: { id: "bp-3", slidesPerView: 3 },
         1600: { id: "bp-4", slidesPerView: 4 }
     }
 
     /** @const */
     const TRACKABLE_CLASSES = [
-        {name: 'scrollbar-track', faIcon: 'fa-solid fa-up-down'},
-        {name: 'scrollbar-thumb', faIcon: 'fa-solid fa-up-down'},
-        {name: 'status-circle', icon: null},
-        {name: 'swiper-pagination-bullet', icon: null},
+        { name: 'scrollbar-track', faIcon: 'fa-solid fa-up-down' },
+        { name: 'scrollbar-thumb', faIcon: 'fa-solid fa-up-down' },
+        { name: 'status-circle', icon: null },
+        { name: 'swiper-pagination-bullet', icon: null },
     ]
 
     return {
