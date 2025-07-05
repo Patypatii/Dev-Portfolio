@@ -1,5 +1,5 @@
 import "./PacMan.scss"
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 function PacMan({ className = "", color = "pacman-color-variant-loader", hidden = false }) {
     const hiddenClass = hidden ?

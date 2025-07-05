@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This component is a custom hook that provides a way to schedule and manage timeouts and intervals.
  */
@@ -14,7 +14,7 @@ export const useScheduler = () => {
      */
     const schedule = (callback, timeInMilliseconds, tag) => {
         const timeoutId = setTimeout(callback, timeInMilliseconds)
-        timeouts.push({id: timeoutId, tag: tag})
+        timeouts.push({ id: timeoutId, tag: tag })
     }
 
     /**
@@ -24,7 +24,7 @@ export const useScheduler = () => {
      */
     const interval = (callback, timeInMilliseconds, tag) => {
         const intervalId = setInterval(callback, timeInMilliseconds)
-        intervals.push({id: intervalId, tag: tag})
+        intervals.push({ id: intervalId, tag: tag })
     }
 
     /**
