@@ -91,7 +91,7 @@
                 },
                 {
                     "id": 2,
-                    "img": "images/pictures/timeline-place-university-paris.png",
+                    "img": "images/pictures/timeline-place-university-paris.jpeg",
                     "dateStart": {
                         "year": 2021,
                         "month": 3
@@ -148,14 +148,14 @@
                 },
                 {
                     "id": 3,
-                    "img": "images/pictures/timeline-place-harvard.png",
+                    "img": "images/pictures/timeline-place-harvard.jpeg",
                     "dateStart": {
-                        "year": 2022,
+                        "year": 2023,
                         "month": 9
                     },
                     "dateEnd": {
-                        "year": 2026,
-                        "month": 6
+                        "year": 2027,
+                        "month": 4
                     },
                     "locales": {
                         "en": {
@@ -207,7 +207,7 @@
                 },
                 {
                     "id": 4,
-                    "img": "images/pictures/timeline-place-mit.png",
+                    "img": "images/pictures/timeline-place-mit.jpeg",
                     "faIcon": "",
                     "faIconColors": {
                         "bg": "",

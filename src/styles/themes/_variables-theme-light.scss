@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @description Light theme colors.
  *
  * What each color represents:
@@ -33,75 +33,103 @@
 
 @import "theme-variables-builder";
 
-$primary: #269366;
-$secondary: darken(#798287, 10%);
-$dark: #bfe0c5;
-$danger: #932626;
+$primary: #00bfff;
+$secondary: darken(#d47eff, 10%);
+$dark: #ade9fd;
+$danger: #ff4d4f;
 $muted: #7c8d7f;
 
-$base-bg: #91d7aa;
-$base-bg-light: #a6e3b8;
-$base-bg-dark: #7ecb94;
+$base-bg: #f9fbff;
+$base-bg-light: #edf3fb;
+$base-bg-dark: #dde8f5;
 
 $texts: #202521;
-$texts-inverted: #EEE;
+$texts-inverted: #ffffff;
 
-$base-container-bg: #d9f5e0;
-$base-container-bg-accent: #c2e9d0;
-$base-popover-bg: #cae1d4;
-$base-boards: #d2eed8;
-$base-info-badges: #c3e3cd;
-$empty: #e8f8ef;
+$base-container-bg: #ffffff;
+$base-container-bg-accent: #f2f4f8;
+$base-popover-bg: #ffffff;
+$base-boards: #f4f7fc;
+$base-info-badges: #e0eaff;
+$empty: #f0f3f9;
 
-$borders: #d9efdc;
-$borders-nav-mobile: rgba(white, 0.15);
-$borders-nav-mobile-accent: rgba(white, 0.2);
-$scrollbar-track: #daf5e1;
-$scrollbar-thumb: #55bd91;
+$borders: #d8dee9;
+$borders-nav-mobile: rgba(0, 0, 0, 0.07);
+$borders-nav-mobile-accent: rgba(0, 0, 0, 0.12);
+$scrollbar-track: #f1f1f1;
+$scrollbar-thumb: #a67cff;
 
 [data-theme="light"] {
-    @include build-theme(
-        // Theme Config...
-        /** DARK MODE: **/                  false,
+    @include build-theme( // Theme Config...
+        /** DARK MODE: **/
+        false,
 
         // Base Colors...
-        /** PRIMARY: **/                    $primary,
-        /** SECONDARY: **/                  $secondary,
-        /** DARK: **/                       $dark,
-        /** DANGER: **/                     $danger,
-        /** MUTED: **/                      $muted,
+        /** PRIMARY: **/
+        $primary,
+        /** SECONDARY: **/
+        $secondary,
+        /** DARK: **/
+        $dark,
+        /** DANGER: **/
+        $danger,
+        /** MUTED: **/
+        $muted,
 
         // Main Layout Colors...
-        /** BG: **/                         $base-bg,
-        /** BG CONTRAST: **/                $base-bg-light,
-        /** BG CONTRAST DARKEN:**/          $base-bg-dark,
-        /** TEXTS: **/                      $texts,
-        /** TEXTS (INVERTED): **/           $texts-inverted,
+        /** BG: **/
+        $base-bg,
+        /** BG CONTRAST: **/
+        $base-bg-light,
+        /** BG CONTRAST DARKEN:**/
+        $base-bg-dark,
+        /** TEXTS: **/
+        $texts,
+        /** TEXTS (INVERTED): **/
+        $texts-inverted,
 
         // Nav
-        /** NAV MOBILE BG: **/              $base-container-bg-accent,
-        /** NAV MOBILE: **/                 $texts,
-        /** NAV MOBILE BORDER: **/          $borders-nav-mobile-accent,
+        /** NAV MOBILE BG: **/
+        $base-container-bg-accent,
+        /** NAV MOBILE: **/
+        $texts,
+        /** NAV MOBILE BORDER: **/
+        $borders-nav-mobile-accent,
 
-        /** NAV MOBILE HOVER BG: **/        $base-container-bg-accent,
-        /** NAV MOBILE HOVER: **/           $primary,
+        /** NAV MOBILE HOVER BG: **/
+        $base-container-bg-accent,
+        /** NAV MOBILE HOVER: **/
+        $primary,
 
-        /** NAV MOBILE SELECTED BG: **/     $primary,
-        /** NAV MOBILE SELECTED: **/        $texts-inverted,
-        /** NAV MOBILE SELECTED BORDER: **/ $borders-nav-mobile,
+        /** NAV MOBILE SELECTED BG: **/
+        $primary,
+        /** NAV MOBILE SELECTED: **/
+        $texts-inverted,
+        /** NAV MOBILE SELECTED BORDER: **/
+        $borders-nav-mobile,
 
         // Main Layout Elements...
-        /** SECTION BG: **/                 $base-container-bg,
-        /** CARD BG: **/                    $base-container-bg,
-        /** POPUPS BG: **/                  $base-popover-bg,
-        /** BOARDS: **/                     $base-boards,
-        /** INFO BADGE BG: **/              $base-info-badges,
-        /** INFO BADGE **/                  $texts,
-        /** EMPTY **/                       $empty,
+        /** SECTION BG: **/
+        $base-container-bg,
+        /** CARD BG: **/
+        $base-container-bg,
+        /** POPUPS BG: **/
+        $base-popover-bg,
+        /** BOARDS: **/
+        $base-boards,
+        /** INFO BADGE BG: **/
+        $base-info-badges,
+        /** INFO BADGE **/
+        $texts,
+        /** EMPTY **/
+        $empty,
 
         // Other Colors...
-        /** DEFAULT BORDERS: **/            $borders,
-        /** SCROLLBAR TRACK: **/            $scrollbar-track,
-        /** SCROLLBAR THUMB: **/            $scrollbar-thumb,
+        /** DEFAULT BORDERS: **/
+        $borders,
+        /** SCROLLBAR TRACK: **/
+        $scrollbar-track,
+        /** SCROLLBAR THUMB: **/
+        $scrollbar-thumb,
     );
 }
