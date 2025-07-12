@@ -27,7 +27,6 @@
             }
         }
     },
-
     "articles": [
         {
             "id": 1,
@@ -42,9 +41,18 @@
                     "id": 1,
                     "img": "images/pictures/timeline-place-sapphire-studio.png",
                     "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2016, "month": 3},
-                    "dateEnd": {"year": 2018, "month": 6},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2016,
+                        "month": 3
+                    },
+                    "dateEnd": {
+                        "year": 2018,
+                        "month": 6
+                    },
                     "locales": {
                         "en": {
                             "title": "{{Backend}} Developer",
@@ -53,7 +61,11 @@
                             "institution": "Sapphire Studio",
                             "text": "Developed and maintained [[scalable backend systems]] for various clients, optimizing database performance and implementing RESTful APIs to improve application functionality.",
                             "list": [],
-                            "tags": ["PHP8.0", "MySQL", "Laravel"]
+                            "tags": [
+                                "PHP8.0",
+                                "MySQL",
+                                "Laravel"
+                            ]
                         },
                         "es": {
                             "title": "Desarrollador {{Backend}}",
@@ -88,9 +100,18 @@
                     "id": 2,
                     "img": "images/pictures/timeline-place-coursera.png",
                     "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2018, "month": 6},
-                    "dateEnd": {"year": 2020, "month": 12},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2018,
+                        "month": 6
+                    },
+                    "dateEnd": {
+                        "year": 2020,
+                        "month": 12
+                    },
                     "locales": {
                         "en": {
                             "title": "{{Full-Stack}} Engineer",
@@ -99,7 +120,13 @@
                             "institution": "Coursera",
                             "text": "Worked on enhancing the Coursera website by implementing new features and improving user experience, utilizing both frontend and backend technologies to ensure seamless functionality.",
                             "list": [],
-                            "tags": ["Svelte", "NodeJS", "Laravel", "REST APIs", "Docker"]
+                            "tags": [
+                                "Svelte",
+                                "NodeJS",
+                                "Laravel",
+                                "REST APIs",
+                                "Docker"
+                            ]
                         },
                         "es": {
                             "title": "Ingeniero {{Full-Stack}}",
@@ -134,9 +161,18 @@
                     "id": 3,
                     "img": "images/pictures/timeline-place-adobe.png",
                     "faIcon": "",
-                    "faIconColors": {"bg": "", "fill": ""},
-                    "dateStart": {"year": 2020, "month": 12},
-                    "dateEnd": {"year": 2022, "month": 11},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2020,
+                        "month": 12
+                    },
+                    "dateEnd": {
+                        "year": 2022,
+                        "month": 11
+                    },
                     "locales": {
                         "en": {
                             "title": "{{Backend}} Engineer",
@@ -145,7 +181,13 @@
                             "institution": "Adobe Inc",
                             "text": "Contributed to the development of robust backend systems for Adobe Creative Cloud, integrating third-party services and improving data processing efficiency through cloud functions.",
                             "list": [],
-                            "tags": ["JavaScript", "Flutter", "MongoDB", "CodeIgniter", "Kubernetes"]
+                            "tags": [
+                                "JavaScript",
+                                "Flutter",
+                                "MongoDB",
+                                "CodeIgniter",
+                                "Kubernetes"
+                            ]
                         },
                         "es": {
                             "title": "Ingeniero {{Backend}}",
@@ -180,9 +222,17 @@
                     "id": 4,
                     "img": "",
                     "faIcon": "fa-brands fa-apple",
-                    "faIconColors": {"bg": "#111", "fill": "#EEE"},
-                    "dateStart": {"year": 2022, "month": 12},
-                    "dateEnd": {"now": true},
+                    "faIconColors": {
+                        "bg": "#111",
+                        "fill": "#EEE"
+                    },
+                    "dateStart": {
+                        "year": 2022,
+                        "month": 12
+                    },
+                    "dateEnd": {
+                        "now": true
+                    },
                     "locales": {
                         "en": {
                             "title": "{{Senior Backend}} Developer",
@@ -197,7 +247,14 @@
                                 "Optimizing database performance with PostgreSQL",
                                 "Building services with Swift, PHP, and GraphQL"
                             ],
-                            "tags": ["JavaScript", "React", "NodeJS", "PHP", "REST APIs", "Docker"]
+                            "tags": [
+                                "JavaScript",
+                                "React",
+                                "NodeJS",
+                                "PHP",
+                                "REST APIs",
+                                "Docker"
+                            ]
                         },
                         "es": {
                             "title": "Desarrollador {{Senior Backend}}",
@@ -242,6 +299,72 @@
                                 "PostgreSQL을 사용한 데이터베이스 성능 최적화",
                                 "Swift, PHP, GraphQL로 서비스 구축"
                             ],
+                            "tags": []
+                        }
+                    }
+                },
+                {
+                    "id": 5,
+                    "img": "images/svg/logo.svg",
+                    "faIcon": "",
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
+                    "dateStart": {
+                        "year": 2021,
+                        "month": 5
+                    },
+                    "dateEnd": {
+                        "year": 2023,
+                        "month": 10
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "3D Animator & Graphics Designer",
+                            "province": "Nairobi",
+                            "country": "Kenya",
+                            "institution": "Freelance / 3D Pixels Studio",
+                            "text": "Produced high-quality 3D animations and visual designs for product advertisements, brand identity campaigns, and educational content using Blender, After Effects, and Adobe Illustrator.",
+                            "list": [
+                                "Developed 3D animations for company logos and product prototypes",
+                                "Delivered graphic design assets for marketing teams and clients",
+                                "Collaborated with software developers to animate UI/UX mockups",
+                                "Optimized 3D workflows for faster rendering and production"
+                            ],
+                            "tags": [
+                                "Blender",
+                                "After Effects",
+                                "Photoshop",
+                                "Illustrator",
+                                "Cinema 4D"
+                            ]
+                        },
+                        "es": {
+                            "title": "Animador 3D y Diseñador Gráfico",
+                            "province": "Nairobi",
+                            "country": "Kenia",
+                            "institution": "Freelance / 3D Pixels Studio",
+                            "text": "Producción de animaciones 3D de alta calidad y diseños visuales para anuncios de productos, campañas de marca y contenido educativo utilizando Blender y Adobe.",
+                            "list": [],
+                            "tags": []
+                        },
+                        "fr": {
+                            "title": "Animateur 3D & Graphiste",
+                            "province": "Nairobi",
+                            "country": "Kenya",
+                            "institution": "Freelance / 3D Pixels Studio",
+                            "text": "Création d’animations 3D et de conceptions graphiques de haute qualité pour des publicités de produits, des identités visuelles de marques et des contenus pédagogiques.",
+                            "list": [],
+                            "tags": []
+                        },
+                        "ko": {
+                            "title": "3D 애니메이터 및 그래픽 디자이너",
+                            "province": "나이로비",
+                            "country": "케냐",
+                            "institution": "프리랜서 / 3D Pixels Studio",
+                            "text": "제품 광고, 브랜드 캠페인, 교육 콘텐츠용 고품질 3D 애니메이션 및 그래픽 디자인 제작. Blender와 Adobe 도구 사용.",
+                            "list": [],
                             "tags": []
                         }
                     }
