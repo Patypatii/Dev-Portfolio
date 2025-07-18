@@ -1,11 +1,11 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider handles the theme management for the application, allowing users to switch between different themes.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useUtils} from "/src/hooks/utils.js"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useUtils } from "/src/hooks/utils.js"
 import ActivitySpinner from "/src/components/loaders/ActivitySpinner.jsx"
 
 function ThemeProvider({ children, supportedThemes, defaultThemeId, showSpinnerOnThemeChange, onThemeChanged }) {
@@ -25,7 +25,7 @@ function ThemeProvider({ children, supportedThemes, defaultThemeId, showSpinnerO
 
     /** @constructs **/
     useEffect(() => {
-        if(allThemes.length === 0) {
+        if (allThemes.length === 0) {
             utils.log.throwError("ThemeProvider", "The app must support at least one theme. Make sure you filled the supportedThemes property in the settings.json file.")
             return
         }
@@ -47,21 +47,21 @@ function ThemeProvider({ children, supportedThemes, defaultThemeId, showSpinnerO
 
         setSelectedThemeId(theme.id)
         utils.storage.setPreferredTheme(theme.id)
-        if(!showSpinnerOnThemeChange || !selectedThemeId) {
+        if (!showSpinnerOnThemeChange || !selectedThemeId) {
             _apply()
             return
         }
 
-        setSpinnerActivities([{id: "theme-change"}])
+        setSpinnerActivities([{ id: "theme-change" }])
         setTimeout(() => { _apply() }, 30)
         setTimeout(() => { setSpinnerActivities([]) }, 300)
     }
 
     const getAvailableThemes = (excludeSelected) => {
-        if(!allThemes)
+        if (!allThemes)
             return []
 
-        if(!excludeSelected)
+        if (!excludeSelected)
             return allThemes
         return allThemes.filter(theme => theme.id !== selectedThemeId)
     }
@@ -87,7 +87,7 @@ function ThemeProvider({ children, supportedThemes, defaultThemeId, showSpinnerO
             toggle
         }}>
             <ActivitySpinner activities={spinnerActivities}
-                             defaultMessage={null}/>
+                defaultMessage={null} />
 
             {selectedThemeId && (
                 <>{children}</>

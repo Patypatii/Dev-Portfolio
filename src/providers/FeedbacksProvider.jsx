@@ -1,14 +1,14 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider is responsible for managing feedbacks, modals and UI interactions.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useUtils} from "/src/hooks/utils.js"
-import {useScheduler} from "/src/hooks/scheduler.js"
-import {useLanguage} from "/src/providers/LanguageProvider.jsx"
-import {useViewport} from "/src/providers/ViewportProvider.jsx"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useUtils } from "/src/hooks/utils.js"
+import { useScheduler } from "/src/hooks/scheduler.js"
+import { useLanguage } from "/src/providers/LanguageProvider.jsx"
+import { useViewport } from "/src/providers/ViewportProvider.jsx"
 import ActivitySpinner from "/src/components/loaders/ActivitySpinner.jsx"
 import MouseLayer from "/src/components/mouse/MouseLayer.jsx"
 import NotificationsLayer from "/src/components/notifications/NotificationsLayer.jsx"
@@ -67,7 +67,7 @@ function FeedbacksProvider({ children, canHaveAnimatedCursor }) {
     const toggleAnimatedCursorActive = (withNotification) => {
         const newValue = !animatedCursorActive
         setAnimatedCursorActive(newValue)
-        if(!withNotification)
+        if (!withNotification)
             return
 
         displayNotification(
@@ -159,23 +159,23 @@ function FeedbacksProvider({ children, canHaveAnimatedCursor }) {
             isBlockedByOverlay
         }}>
             <ActivitySpinner activities={spinnerActivities}
-                             defaultMessage={language.getString("loading")}/>
+                defaultMessage={language.getString("loading")} />
 
             <MouseLayer active={animatedCursorEnabled && animatedCursorActive}
-                        hidden={animatedCursorLocked}
-                        isBlockedByOverlay={isBlockedByOverlay()}/>
+                hidden={animatedCursorLocked}
+                isBlockedByOverlay={isBlockedByOverlay()} />
 
             <NotificationsLayer target={displayingNotification}
-                                onNotificationDismissed={killNotification}/>
+                onNotificationDismissed={killNotification} />
 
             <YoutubeVideoModal target={displayingYoutubeVideo}
-                               onDismiss={closeYoutubeVideo}/>
+                onDismiss={closeYoutubeVideo} />
 
             <ConfirmationWindowModal target={pendingConfirmation}
-                                     onDismiss={() => {setPendingConfirmation(null)}}/>
+                onDismiss={() => { setPendingConfirmation(null) }} />
 
             <GalleryModal target={displayingGallery}
-                          onDismiss={closeGallery}/>
+                onDismiss={closeGallery} />
 
             {children}
         </FeedbacksContext.Provider>

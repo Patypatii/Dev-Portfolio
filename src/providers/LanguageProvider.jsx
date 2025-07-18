@@ -1,12 +1,12 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider is responsible for managing the application's language settings and translations.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useUtils} from "/src/hooks/utils.js"
-import {useConstants} from "/src/hooks/constants.js"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useUtils } from "/src/hooks/utils.js"
+import { useConstants } from "/src/hooks/constants.js"
 
 function LanguageProvider({ children, supportedLanguages, defaultLanguageId, appStrings, selectedThemeId }) {
     const constants = useConstants()
@@ -25,7 +25,7 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
 
     /** @constructs **/
     useEffect(() => {
-        if(allLanguages.length === 0) {
+        if (allLanguages.length === 0) {
             utils.log.throwError("LanguageProvider", "The app must support at least one language. Make sure you filled the supportedLanguages property in the settings.json file.")
             return
         }
@@ -33,7 +33,7 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
         // Load the preferred language from local storage.
         const savedLanguageId = utils.storage.getPreferredLanguage()
         const savedLanguage = allLanguages.find(lang => lang.id === savedLanguageId)
-        if(savedLanguage) {
+        if (savedLanguage) {
             setSelectedLanguageId(savedLanguageId)
             return
         }
@@ -45,7 +45,7 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
 
     /** @listens selectedLanguageId **/
     useEffect(() => {
-        if(!selectedLanguageId)
+        if (!selectedLanguageId)
             return
         utils.storage.setPreferredLanguage(selectedLanguageId)
     }, [selectedLanguageId])
@@ -59,23 +59,23 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     }
 
     const getAvailableLanguages = (excludeSelected) => {
-        if(!allLanguages)
+        if (!allLanguages)
             return []
 
-        if(!excludeSelected)
+        if (!excludeSelected)
             return allLanguages
         return allLanguages.filter(language => language.id !== selectedLanguageId)
     }
 
     const getTranslation = (locales, key, customFallback) => {
-        if(!selectedLanguageId || !locales)
+        if (!selectedLanguageId || !locales)
             return "locale:" + key
 
         const selectedLanguageTranslation = _translate(locales[selectedLanguageId], key)
-        if(selectedLanguageTranslation) return selectedLanguageTranslation
+        if (selectedLanguageTranslation) return selectedLanguageTranslation
 
         const defaultLanguageTranslation = _translate(locales[defaultLanguageId], key)
-        if(defaultLanguageTranslation) return defaultLanguageTranslation
+        if (defaultLanguageTranslation) return defaultLanguageTranslation
 
         return customFallback !== undefined ?
             parseJsonText(customFallback) :
@@ -83,12 +83,12 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     }
 
     const _translate = (locales, key) => {
-        if(!locales) return null
+        if (!locales) return null
 
         const field = locales[key]
-        if(!field) return null
+        if (!field) return null
 
-        if(Array.isArray(field)) {
+        if (Array.isArray(field)) {
             return field.length ? field : null
         }
         else {
@@ -97,7 +97,7 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     }
 
     const parseJsonText = (text) => {
-        if(typeof text !== 'string')
+        if (typeof text !== 'string')
             return text
 
         return text.replace(/\{\{(.*?)\}\}/g, `<span class="${constants.HTML_CLASSES.textHighlight}">$1</span>`)
@@ -114,14 +114,14 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     }
 
     const getDateLocaleString = (date) => {
-        if(!date) return `date.null`
-        if(utils.date.isSameDay(date)) return `<strong>${getString("present")}</strong>`
+        if (!date) return `date.null`
+        if (utils.date.isSameDay(date)) return `<strong>${getString("present")}</strong>`
 
         const localeString = date.toLocaleString(
             selectedLanguageId,
-            {year: "numeric", month: "short"}
+            { year: "numeric", month: "short" }
         )
-        
+
         return localeString
             .replaceAll('.', '')
             .replace(/\d{4}/, (year) => `<strong>${year}</strong>`)
@@ -129,13 +129,13 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     }
 
     const getExperienceTimeString = (date) => {
-        if(!date) return null
+        if (!date) return null
 
         const yearsDiff = utils.date.getYearsPassedSince(date)
         const floorYearsDiff = Math.floor(yearsDiff)
-        if(floorYearsDiff > 1)
+        if (floorYearsDiff > 1)
             return getString("experience_year_count_plural").replace("{x}", floorYearsDiff + "+")
-        else if(floorYearsDiff === 1)
+        else if (floorYearsDiff === 1)
             return getString("experience_year_count_singular").replace("{x}", floorYearsDiff.toString())
         else
             return getString("experience_year_count_less_than_one")

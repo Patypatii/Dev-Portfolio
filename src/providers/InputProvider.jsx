@@ -1,12 +1,12 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider is responsible for managing user input events such as keyboard and mouse interactions.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useUtils} from "/src/hooks/utils.js"
-import {useScheduler} from "/src/hooks/scheduler.js"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useUtils } from "/src/hooks/utils.js"
+import { useScheduler } from "/src/hooks/scheduler.js"
 
 function InputProvider({ children }) {
     const utils = useUtils()
@@ -14,11 +14,11 @@ function InputProvider({ children }) {
 
     const tag = "input-provider"
 
-    const [lastKeyPressed, setLastKeyPressed] = useState({id: null, count: -1})
+    const [lastKeyPressed, setLastKeyPressed] = useState({ id: null, count: -1 })
 
-    const [mouseDownStatus, setMouseDownStatus] = useState({clientX: null, clientY: null, count: -1})
-    const [mouseMoveStatus, setMouseMoveStatus] = useState({clientX: null, clientY: null, count: -1})
-    const [mouseUpStatus, setMouseUpStatus] = useState({clientX: null, clientY: null, count: -1})
+    const [mouseDownStatus, setMouseDownStatus] = useState({ clientX: null, clientY: null, count: -1 })
+    const [mouseMoveStatus, setMouseMoveStatus] = useState({ clientX: null, clientY: null, count: -1 })
+    const [mouseUpStatus, setMouseUpStatus] = useState({ clientX: null, clientY: null, count: -1 })
     const [isClicked, setIsClicked] = useState(false)
     const [lastMouseTarget, setLastMouseTarget] = useState(null)
 
@@ -76,7 +76,7 @@ function InputProvider({ children }) {
         scheduler.clearAllWithTag("input-collision-check")
         scheduler.schedule(() => {
             const shouldReset = !utils.dom.isInsideElement(e.target, e.clientX, e.clientY)
-            if(shouldReset) {
+            if (shouldReset) {
                 setLastMouseTarget(null)
             }
         }, 120, "input-collision-check")

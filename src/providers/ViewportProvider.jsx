@@ -1,13 +1,13 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider tracks the viewport size and scroll position, and provides utility functions to manage breakpoints and layout constraints.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useUtils} from "/src/hooks/utils.js"
-import {useScheduler} from "/src/hooks/scheduler.js"
-import {useData} from "/src/providers/DataProvider.jsx"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useUtils } from "/src/hooks/utils.js"
+import { useScheduler } from "/src/hooks/scheduler.js"
+import { useData } from "/src/providers/DataProvider.jsx"
 
 function ViewportProvider({ children }) {
     const data = useData()
@@ -25,8 +25,8 @@ function ViewportProvider({ children }) {
 
     useEffect(() => {
         _createListeners()
-        if(utils.device.isTouchDevice() && utils.device.isAndroid())
-             document.body.classList.add("body-android")
+        if (utils.device.isTouchDevice() && utils.device.isAndroid())
+            document.body.classList.add("body-android")
 
         return () => _destroyListeners()
     }, [])
@@ -82,8 +82,8 @@ function ViewportProvider({ children }) {
     }
 
     const getValueFromBreakpointHash = (hash) => {
-        for(let i in hash)
-            if(isBreakpoint(i)) return hash[i]
+        for (let i in hash)
+            if (isBreakpoint(i)) return hash[i]
         return hash['default']
     }
 

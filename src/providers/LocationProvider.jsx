@@ -1,10 +1,10 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider acts as a router for the application, managing the active section and category based on the URL hash.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 function LocationProvider({ children, sections, categories }) {
     const [didMount, setDidMount] = useState(false)
@@ -29,7 +29,7 @@ function LocationProvider({ children, sections, categories }) {
 
     /** @listens nextSectionId **/
     useEffect(() => {
-        if(!nextSectionId)
+        if (!nextSectionId)
             return
 
         _toNextSection()
@@ -41,7 +41,7 @@ function LocationProvider({ children, sections, categories }) {
 
     const getActiveCategory = () => {
         const activeSection = getActiveSection()
-        if(!activeSection)
+        if (!activeSection)
             return null
         return activeSection.category
     }
@@ -52,26 +52,26 @@ function LocationProvider({ children, sections, categories }) {
 
     const isCategoryActive = (category) => {
         const activeSection = getActiveSection()
-        if(!activeSection)
+        if (!activeSection)
             return false
         return activeSection.category.id === category.id
     }
 
     const goToSection = (section) => {
-        if(!section || activeSectionId === section.id)
+        if (!section || activeSectionId === section.id)
             return
         window.location.hash = section.id
     }
 
     const goToSectionWithId = (sectionId) => {
         const section = sections.find(section => section.id === sectionId)
-        if(section) {
+        if (section) {
             goToSection(section)
         }
     }
 
     const goToCategory = (category) => {
-        if(!category)
+        if (!category)
             return
 
         const targetSectionId = visitHistoryByCategory[category.id]
@@ -82,7 +82,7 @@ function LocationProvider({ children, sections, categories }) {
 
     const goToCategoryWithId = (categoryId) => {
         const category = categories.find(category => category.id === categoryId)
-        if(category) {
+        if (category) {
             goToCategory(category)
         }
     }
@@ -90,7 +90,7 @@ function LocationProvider({ children, sections, categories }) {
     const _onHashEvent = () => {
         const hash = window.location.hash.replace("#", "")
         const targetSection = sections.find(section => section.id === hash)
-        if(targetSection) {
+        if (targetSection) {
             setNextSectionId(targetSection.id)
         }
         else {
@@ -100,7 +100,7 @@ function LocationProvider({ children, sections, categories }) {
 
     const _onInvalidSection = () => {
         const fallbackSection = sections[0]
-        if(fallbackSection) {
+        if (fallbackSection) {
             goToSection(fallbackSection)
         }
     }
@@ -112,7 +112,7 @@ function LocationProvider({ children, sections, categories }) {
         const category = section?.category
         setVisitedSectionsCount(prevState => prevState + 1)
 
-        if(section && category) {
+        if (section && category) {
             setVisitHistoryByCategory(prevState => ({
                 ...prevState,
                 [category.id]: section.id

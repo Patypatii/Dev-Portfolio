@@ -1,18 +1,18 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick Wambugu
  * @date 2025-05-10
  * @description This provider manages the navigation between sections and categories in the application.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
-import {useLocation} from "/src/providers/LocationProvider.jsx"
-import {useLanguage} from "/src/providers/LanguageProvider.jsx"
-import {useConstants} from "/src/hooks/constants.js"
-import {useScheduler} from "/src/hooks/scheduler.js"
-import {useFeedbacks} from "/src/providers/FeedbacksProvider.jsx"
-import {useViewport} from "/src/providers/ViewportProvider.jsx"
-import {useUtils} from "/src/hooks/utils.js"
-import {useLayout} from "/src/hooks/layout.js"
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { useLocation } from "/src/providers/LocationProvider.jsx"
+import { useLanguage } from "/src/providers/LanguageProvider.jsx"
+import { useConstants } from "/src/hooks/constants.js"
+import { useScheduler } from "/src/hooks/scheduler.js"
+import { useFeedbacks } from "/src/providers/FeedbacksProvider.jsx"
+import { useViewport } from "/src/providers/ViewportProvider.jsx"
+import { useUtils } from "/src/hooks/utils.js"
+import { useLayout } from "/src/hooks/layout.js"
 
 function NavigationProvider({ children, sections, categories }) {
     const language = useLanguage()
@@ -66,10 +66,10 @@ function NavigationProvider({ children, sections, categories }) {
      * @listens canTransitionToNextSection
      */
     useEffect(() => {
-        if(!canTransitionToNextSection)
+        if (!canTransitionToNextSection)
             return
 
-        if(viewport.isDesktopLayout()) _startTransition()
+        if (viewport.isDesktopLayout()) _startTransition()
         else _adjustScrollBeforeTransition()
     }, [canTransitionToNextSection])
 
@@ -78,7 +78,7 @@ function NavigationProvider({ children, sections, categories }) {
         setTargetSection(nextSection)
         _updateLinks(nextSection, nextSection.category)
 
-        if(!transitionEnabled) {
+        if (!transitionEnabled) {
             setTransitionStatus(NavigationProvider.TransitionStatus.FINISHING)
             return
         }
@@ -96,14 +96,14 @@ function NavigationProvider({ children, sections, categories }) {
 
         scheduler.clearAllWithTag("adjust-scroll-top")
 
-        if(!mobileNavData.isHeaderHidden) {
-            if(didChangeCategory)
+        if (!mobileNavData.isHeaderHidden) {
+            if (didChangeCategory)
                 utils.capabilities.scrollTo(0, false)
             _startTransition()
             return
         }
 
-        if(nextSection?.category?.sections?.length <= 1) {
+        if (nextSection?.category?.sections?.length <= 1) {
             utils.capabilities.scrollTo(0, false)
             _scheduleTransitionStart(0)
             return
@@ -120,7 +120,7 @@ function NavigationProvider({ children, sections, categories }) {
         let acc = 0
         scheduler.interval(() => {
             acc += 100
-            if(Math.abs(window.scrollY - initialScrollY) < 10 || acc === 1000) {
+            if (Math.abs(window.scrollY - initialScrollY) < 10 || acc === 1000) {
                 _startTransitionAfterScroll(initialScrollY)
             }
         }, 100, "adjust-scroll-top")
@@ -142,11 +142,11 @@ function NavigationProvider({ children, sections, categories }) {
 
         feedbacks.setAnimatedCursorLocked(isRunning)
 
-        if(isFinishing) _finishTransition()
+        if (isFinishing) _finishTransition()
     }, [transitionStatus])
 
     const _finishTransition = () => {
-        if(!scheduledNextSection) {
+        if (!scheduledNextSection) {
             setNextSection(null)
             setScheduledNextSection(null)
 
@@ -168,7 +168,7 @@ function NavigationProvider({ children, sections, categories }) {
 
     /** @listens scheduledNextSection **/
     useEffect(() => {
-        if(!scheduledNextSection) {
+        if (!scheduledNextSection) {
             scheduler.clearAllWithTag("scheduled-next-section-spinner")
             scheduler.schedule(() => {
                 feedbacks.setActivitySpinnerVisible(false, "scheduled-next-section", language.getString("loading"))
@@ -181,7 +181,7 @@ function NavigationProvider({ children, sections, categories }) {
 
     /** @listens location.getActiveSection() **/
     useEffect(() => {
-        if(ignoreNextLocationEvent) {
+        if (ignoreNextLocationEvent) {
             setIgnoreNextLocationEvent(false)
             return
         }
@@ -193,21 +193,21 @@ function NavigationProvider({ children, sections, categories }) {
 
     /** @listens !nextSection && scheduledNextSection **/
     useEffect(() => {
-        if(!nextSection && scheduledNextSection && transitionStatus === NavigationProvider.TransitionStatus.NONE) {
+        if (!nextSection && scheduledNextSection && transitionStatus === NavigationProvider.TransitionStatus.NONE) {
             setNextSection(scheduledNextSection)
             setScheduledNextSection(null)
         }
     }, [!nextSection && scheduledNextSection && transitionStatus === NavigationProvider.TransitionStatus.NONE])
 
     const navigateToSection = (section) => {
-        if(!nextSection) {
-            if(targetSection !== section) setNextSection(section)
+        if (!nextSection) {
+            if (targetSection !== section) setNextSection(section)
             else forceScrollToTop()
         }
 
-        else if(section !== nextSection) {
+        else if (section !== nextSection) {
             setScheduledNextSection(section)
-            if(resettingScrollYTo) {
+            if (resettingScrollYTo) {
                 _startTransitionAfterScroll(resettingScrollYTo)
             }
         }
@@ -221,10 +221,10 @@ function NavigationProvider({ children, sections, categories }) {
     const navigateToSectionWithLink = (href) => {
         setTransitionEnabled(true)
 
-        if(href.startsWith("#cat:")) {
+        if (href.startsWith("#cat:")) {
             const categoryId = href.replaceAll("#cat:", "")
             const category = categories.find(({ id }) => id === categoryId)
-            if(!category)
+            if (!category)
                 return
 
             const sectionId = location.visitHistoryByCategory[category.id] || category.sections[0].id
@@ -264,9 +264,9 @@ function NavigationProvider({ children, sections, categories }) {
     }
 
     const forceScrollToTop = () => {
-        if(viewport.isMobileLayout()) {
+        if (viewport.isMobileLayout()) {
             const mobileNavData = layout.getMobileNavData(window.scrollY)
-            if(mobileNavData.navHeaderElHeight) {
+            if (mobileNavData.navHeaderElHeight) {
                 window.scrollTo({
                     top: mobileNavData.contentTop,
                     behavior: "smooth"

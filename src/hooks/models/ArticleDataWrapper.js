@@ -1,11 +1,11 @@
 /**
- * @author Ryan Balieiro
+ * @author Patrick wambugu
  * @date 2025-05-10
  * @description This class is a wrapper for the article data. It provides methods to parse and validate the data loaded from a section's JSON file.
  */
 
 import ArticleItemDataWrapper from "/src/hooks/models/ArticleItemDataWrapper.js"
-import {useUtils} from "/src/hooks/utils.js"
+import { useUtils } from "/src/hooks/utils.js"
 
 const utils = useUtils()
 
@@ -100,7 +100,7 @@ export default class ArticleDataWrapper {
         const settings = rawData.settings || {}
         const categorizeBy = settings["categorize_by"]
 
-        if(!categorizeBy || !Array.isArray(categorizeBy) || categorizeBy.length === 0)
+        if (!categorizeBy || !Array.isArray(categorizeBy) || categorizeBy.length === 0)
             return []
 
         const categories = [{
@@ -149,7 +149,7 @@ export default class ArticleDataWrapper {
     }
 
     getOrderedItemsFilteredBy(categoryId) {
-        if(!categoryId || categoryId === "category_all")
+        if (!categoryId || categoryId === "category_all")
             return this.orderedItems
 
         return this.orderedItems.filter(item => {
@@ -161,7 +161,7 @@ export default class ArticleDataWrapper {
         // Check if all items have a valid categoryId...
         const categories = this.categories.map(category => category.id)
         this._items.forEach(item => {
-            if(categories.length > 1 && !categories.includes(item.categoryId)) {
+            if (categories.length > 1 && !categories.includes(item.categoryId)) {
                 utils.log.warn(
                     "ArticleDataWrapper",
                     `Item ${item.id} has an invalid categoryId "${item.categoryId}".`
