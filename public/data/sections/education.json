@@ -295,6 +295,66 @@
                             ]
                         }
                     }
+                },
+                {
+                    "id": 5,
+                    "img": "images/pictures/timeline-place-freecodecamp-microsoft.png",
+                    "dateStart": {
+                        "year": 2025,
+                        "month": 7
+                    },
+                    "dateEnd": {
+                        "year": 2025,
+                        "month": 7
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "Foundational C# with Microsoft",
+                            "province": "Online",
+                            "country": "Remote",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "Successfully completed the Foundational C# with Microsoft Developer Certification. Covered .NET, OOP principles, and C# syntax through hands-on projects and theory.",
+                            "list": [
+                                "C#",
+                                ".NET",
+                                "Object-Oriented Programming",
+                                "Microsoft Learn"
+                            ],
+                            "tags": [
+                                "C#",
+                                "Microsoft",
+                                "freeCodeCamp",
+                                "Backend"
+                            ]
+                        },
+                        "es": {
+                            "title": "Certificación en C# con Microsoft",
+                            "province": "En línea",
+                            "country": "Remoto",
+                            "institution": "freeCodeCamp y Microsoft",
+                            "text": "Certificación completada en C# con Microsoft, cubriendo fundamentos de .NET, OOP y sintaxis de C#.",
+                            "list": [],
+                            "tags": []
+                        },
+                        "fr": {
+                            "title": "Certification C# avec Microsoft",
+                            "province": "En ligne",
+                            "country": "À distance",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "Certification obtenue sur les fondamentaux de C# avec Microsoft. Inclus .NET, programmation orientée objet et projets pratiques.",
+                            "list": [],
+                            "tags": []
+                        },
+                        "ko": {
+                            "title": "Microsoft와 함께한 C# 기초 인증",
+                            "province": "온라인",
+                            "country": "원격",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "Microsoft와 함께하는 Foundational C# 인증 수료. .NET 및 객체 지향 프로그래밍에 중점을 둔 실습 프로젝트 포함.",
+                            "list": [],
+                            "tags": []
+                        }
+                    }
                 }
             ]
         }
