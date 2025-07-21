@@ -27,7 +27,6 @@
             }
         }
     },
-
     "articles": [
         {
             "id": 1,
@@ -42,7 +41,10 @@
                     "id": 1,
                     "img": null,
                     "faIcon": "fa-solid fa-tablet-screen-button",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "03",
@@ -63,7 +65,10 @@
                     "id": 2,
                     "img": null,
                     "faIcon": "fa-solid fa-star",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "100+",
@@ -84,7 +89,10 @@
                     "id": 3,
                     "img": null,
                     "faIcon": "fa-solid fa-globe",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "12",
@@ -105,7 +113,10 @@
                     "id": 4,
                     "img": null,
                     "faIcon": "fa-solid fa-diagram-project",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "07",
@@ -126,7 +137,10 @@
                     "id": 5,
                     "img": null,
                     "faIcon": "fa-solid fa-coffee",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "20,000",
@@ -147,7 +161,10 @@
                     "id": 6,
                     "img": null,
                     "faIcon": "fa-solid fa-laptop-code",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "1,000,000+",
@@ -168,7 +185,10 @@
                     "id": 7,
                     "img": null,
                     "faIcon": "fa-solid fa-heart",
-                    "faIconColors": {"bg": "", "fill": ""},
+                    "faIconColors": {
+                        "bg": "",
+                        "fill": ""
+                    },
                     "locales": {
                         "en": {
                             "title": "Infinite",
@@ -190,15 +210,22 @@
                 }
             ]
         },
-
         {
             "id": 2,
             "component": "ArticleThread",
             "locales": {
-                "en": { "title": "Quick {{Facts}}" },
-                "es": { "title": "Feed de {{Noticias}}" },
-                "fr": { "title": "Fil d'{{Actualités}}" },
-                "ko": { "title": "{{뉴스}} 피드" }
+                "en": {
+                    "title": "Quick {{Facts}}"
+                },
+                "es": {
+                    "title": "Feed de {{Noticias}}"
+                },
+                "fr": {
+                    "title": "Fil d'{{Actualités}}"
+                },
+                "ko": {
+                    "title": "{{뉴스}} 피드"
+                }
             },
             "settings": {
                 "max_rows_collapse_threshold": 3,
@@ -208,7 +235,10 @@
             "items": [
                 {
                     "id": 1,
-                    "date": {"year": 2022, "month": 9},
+                    "date": {
+                        "year": 2022,
+                        "month": 9
+                    },
                     "preview": {
                         "links": [],
                         "screenshots": [],
@@ -248,13 +278,18 @@
                 },
                 {
                     "id": 2,
-                    "date": {"year": 2023, "month": 6},
+                    "date": {
+                        "year": 2023,
+                        "month": 6
+                    },
                     "preview": {
-                        "links": [{
-                            "href": "https://www.youtube.com/@jomakaze",
-                            "tooltipString": "open_website",
-                            "faIcon": "fa-solid fa-eye"
-                        }],
+                        "links": [
+                            {
+                                "href": "https://www.youtube.com/@jomakaze",
+                                "tooltipString": "open_website",
+                                "faIcon": "fa-solid fa-eye"
+                            }
+                        ],
                         "screenshots": [],
                         "screenshotsAspectRatio": "",
                         "youtubeVideo": "https://www.youtube.com/watch?v=oFCy3vEIAQk"
@@ -292,10 +327,17 @@
                 },
                 {
                     "id": 3,
-                    "date": {"year": 2024, "month": 12},
+                    "date": {
+                        "year": 2024,
+                        "month": 12
+                    },
                     "preview": {
                         "links": [
-                            {"href": "https://medium.com", "tooltipString": "open_website", "faIcon": "fa-brands fa-medium"}
+                            {
+                                "href": "https://medium.com",
+                                "tooltipString": "open_website",
+                                "faIcon": "fa-brands fa-medium"
+                            }
                         ],
                         "screenshots": [],
                         "screenshotsAspectRatio": "",
@@ -358,7 +400,10 @@
                 },
                 {
                     "id": 4,
-                    "date": {"year": 2025, "month": 3},
+                    "date": {
+                        "year": 2025,
+                        "month": 3
+                    },
                     "preview": {
                         "links": [],
                         "screenshots": [],
@@ -398,11 +443,22 @@
                 },
                 {
                     "id": 5,
-                    "date": {"year": 2025, "month": 6},
+                    "date": {
+                        "year": 2025,
+                        "month": 6
+                    },
                     "preview": {
                         "links": [
-                            {"href": "https://google.com", "tooltipString": "open_website", "faIcon": "fa-solid fa-link"},
-                            {"href": "https://github.com/ryanbalieiro/react-portfolio-template", "tooltipString": "see_on_github", "faIcon": "fa-brands fa-github"}
+                            {
+                                "href": "https://google.com",
+                                "tooltipString": "open_website",
+                                "faIcon": "fa-solid fa-link"
+                            },
+                            {
+                                "href": "https://github.com/ryanbalieiro/react-portfolio-template",
+                                "tooltipString": "see_on_github",
+                                "faIcon": "fa-brands fa-github"
+                            }
                         ],
                         "screenshots": [],
                         "screenshotsAspectRatio": "",
@@ -460,6 +516,55 @@
                                 "문의 및 협업을 위한 연락처 양식",
                                 "소셜 미디어 프로필 및 GitHub 링크"
                             ]
+                        }
+                    }
+                },
+                {
+                    "id": 6,
+                    "date": {
+                        "year": 2025,
+                        "month": 7
+                    },
+                    "preview": {
+                        "links": [
+                            {
+                                "href": "https://www.freecodecamp.org/certification/your-username/c-sharp",
+                                "tooltipString": "view_certificate",
+                                "faIcon": "fa-solid fa-certificate"
+                            }
+                        ],
+                        "screenshots": [],
+                        "screenshotsAspectRatio": "",
+                        "youtubeVideo": ""
+                    },
+                    "locales": {
+                        "en": {
+                            "title": "Earned my {{C# Certification!}}",
+                            "province": "",
+                            "country": "US",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "I’m proud to share that I’ve officially earned my C# certification through freeCodeCamp in collaboration with Microsoft! 🎓💻 This certification marks a significant milestone in my journey to mastering back-end development and building robust applications with C#. A huge thanks to the amazing curriculum and community that made this possible!"
+                        },
+                        "es": {
+                            "title": "Obtuve mi {{Certificación de C#!}}",
+                            "province": "",
+                            "country": "EE.UU.",
+                            "institution": "freeCodeCamp y Microsoft",
+                            "text": "¡Me enorgullece compartir que he obtenido oficialmente mi certificación de C# a través de freeCodeCamp en colaboración con Microsoft! 🎓💻 Esta certificación marca un hito importante en mi camino para dominar el desarrollo de back-end y construir aplicaciones sólidas con C#. ¡Gracias a la increíble comunidad y currículo que lo hicieron posible!"
+                        },
+                        "fr": {
+                            "title": "J'ai obtenu ma {{Certification C#!}}",
+                            "province": "",
+                            "country": "États-Unis",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "Je suis fier d'annoncer que j'ai officiellement obtenu ma certification en C# grâce à freeCodeCamp en collaboration avec Microsoft ! 🎓💻 Cette certification représente une étape importante dans mon parcours de maîtrise du développement back-end et de création d'applications robustes en C#. Un grand merci à la communauté et au programme qui ont rendu cela possible !"
+                        },
+                        "ko": {
+                            "title": "{{C# 인증서}} 획득!",
+                            "province": "",
+                            "country": "미국",
+                            "institution": "freeCodeCamp & Microsoft",
+                            "text": "freeCodeCamp와 Microsoft의 협업을 통해 C# 인증서를 공식적으로 획득했습니다! 🎓💻 이 인증은 백엔드 개발을 마스터하고 C#으로 강력한 애플리케이션을 구축하는 여정의 중요한 이정표입니다. 멋진 커리큘럼과 커뮤니티에 감사드립니다!"
                         }
                     }
                 }
