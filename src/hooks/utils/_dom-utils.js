@@ -1,9 +1,9 @@
 /**
- * @author Ryan Balieiro
+ * @author patrick Wambugu
  * @date 2025-05-10
  */
 
-import {useConstants} from "/src/hooks/constants.js"
+import { useConstants } from "/src/hooks/constants.js"
 
 const constants = useConstants()
 
@@ -35,14 +35,14 @@ export const _domUtils = {
 
         Array.from(imageElements).map(item => {
             imageLoadProgress.total++
-            if(item.classList.contains(imageClass + "-loaded") || item.classList.contains(imageClass + "-error"))
+            if (item.classList.contains(imageClass + "-loaded") || item.classList.contains(imageClass + "-error"))
                 imageLoadProgress.loaded++
         })
 
-        if(imageLoadProgress.total === 0)
+        if (imageLoadProgress.total === 0)
             return 100
 
-        const percentage = Math.round(100*imageLoadProgress.loaded/imageLoadProgress.total)
+        const percentage = Math.round(100 * imageLoadProgress.loaded / imageLoadProgress.total)
         return Math.max(0, Math.min(100, percentage))
     },
 
@@ -83,7 +83,7 @@ export const _domUtils = {
      * @param {Boolean} enabled
      */
     setBodyScrollEnabled: (enabled) => {
-        if(enabled) {
+        if (enabled) {
             document.body.classList.remove(constants.HTML_CLASSES.bodyNoScroll)
         }
         else {

@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author patrick Wambugu
  * @date 2025-05-10
  */
 
@@ -11,7 +11,7 @@ export const _jsonUtils = {
     sanitizeForLogs: (json) => {
         const hasFilledField = Object.values(json).some((value) => { return value })
 
-        if(!hasFilledField)
+        if (!hasFilledField)
             return ""
 
         return JSON.stringify(json).replaceAll(`",`, `",<br>`)

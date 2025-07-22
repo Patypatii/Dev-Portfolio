@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author patrick Wambugu
  * @date 2025-05-10
  */
 
@@ -25,7 +25,7 @@ export const _arrayUtils = {
      * @return {String}
      */
     toHtmlList: (array) => {
-        if(!array.length)
+        if (!array.length)
             return ``
 
         let list = `<ul class="list-style-none">`
@@ -41,7 +41,7 @@ export const _arrayUtils = {
      */
     withId: (array, itemId, fallbackId) => {
         const item = array.find(item => item.id === itemId)
-        if(item) return item
+        if (item) return item
         return array.find(item => item.id === fallbackId)
     }
 }

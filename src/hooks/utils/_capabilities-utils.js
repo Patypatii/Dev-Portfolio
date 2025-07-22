@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author patrick Wambugu
  * @date 2025-05-10
  */
 
@@ -8,7 +8,7 @@ export const _capabilitiesUtils = {
      * @param {String} text
      */
     copyToClipboard: async (text) => {
-        if(_capabilitiesUtils.isCopiedToClipboard(text))
+        if (_capabilitiesUtils.isCopiedToClipboard(text))
             return
 
         if (navigator.clipboard && window.isSecureContext) {
@@ -28,7 +28,7 @@ export const _capabilitiesUtils = {
             document.execCommand('copy')
             window.lastCopiedToClipboardText = text
         }
-        catch (error) {}
+        catch (error) { }
         finally {
             textArea.remove()
         }
@@ -68,7 +68,7 @@ export const _capabilitiesUtils = {
      */
     toggleFullscreen: () => {
         const isFullscreen = _capabilitiesUtils.isFullscreen()
-        if(isFullscreen) {
+        if (isFullscreen) {
             document.exitFullscreen()
                 .catch(err => {
                     console.warn(`Error attempting to exit full-screen mode: ${err.message}`)

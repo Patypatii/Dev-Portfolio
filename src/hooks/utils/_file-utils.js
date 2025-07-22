@@ -1,5 +1,5 @@
 /**
- * @author Ryan Balieiro
+ * @author patrick Wambugu
  * @date 2025-05-10
  */
 
@@ -44,7 +44,7 @@ export const _fileUtils = {
      * @return {String}
      */
     resolvePath: (path) => {
-        if(path.startsWith("http"))
+        if (path.startsWith("http"))
             return path
         const baseUrl = _fileUtils.BASE_URL || ""
         return baseUrl + path
